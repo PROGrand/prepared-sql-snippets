@@ -1,0 +1,13 @@
+<templateSet group="Flutter generator snippets">
+  <!-- template name="freezedAbstract" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$fileName$.freezed.dart';&#10;part '$fileName$.g.dart';&#10;&#10;@freezed&#10;abstract class $ClassName$ with _$$$ClassName$ {&#10;  @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)&#10;  const factory $ClassName$({&#10;    $Params$,&#10;  }) = _$ClassName$;&#10;  &#10;  $code$&#10;&#10;  factory $ClassName$.fromJson(Map&lt;String, dynamic&gt; json) =&gt;&#10;      _$$$ClassName$FromJson(json);&#10;}" description="Create feezed template" toReformat="false" toShortenFQNames="true">
+    <variable name="fileName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ClassName" expression="dartClassName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="Params" expression="dartSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template> -->
+</templateSet>

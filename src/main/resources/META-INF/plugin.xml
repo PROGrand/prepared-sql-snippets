@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>org.mtbo.prepared_sql_snippets</id>
+    <name>Prepared SQL snippets tool</name>
+    <vendor email="progrand@gmail.com" url="https://mtbo.org">PROGrand</vendor>
+
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/liveTemplates/prepared_sql_snippets.xml"/>
+        <liveTemplateContext implementation="org.mtbo.preparedsqlsnippets.FlutterContext" contextId="PREPARED_SQL_SNIPPETS"/>
+    </extensions>
+
+</idea-plugin>
