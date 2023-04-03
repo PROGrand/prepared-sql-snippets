@@ -1,4 +1,4 @@
-<templateSet group="Flutter generator snippets">
+<templateSet group="Prepared SQL Snippets">
   <!-- template name="freezedAbstract" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$fileName$.freezed.dart';&#10;part '$fileName$.g.dart';&#10;&#10;@freezed&#10;abstract class $ClassName$ with _$$$ClassName$ {&#10;  @JsonSerializable(fieldRename: FieldRename.snake, explicitToJson: true)&#10;  const factory $ClassName$({&#10;    $Params$,&#10;  }) = _$ClassName$;&#10;  &#10;  $code$&#10;&#10;  factory $ClassName$.fromJson(Map&lt;String, dynamic&gt; json) =&gt;&#10;      _$$$ClassName$FromJson(json);&#10;}" description="Create feezed template" toReformat="false" toShortenFQNames="true">
     <variable name="fileName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
     <variable name="ClassName" expression="dartClassName()" defaultValue="" alwaysStopAt="true" />
@@ -10,4 +10,82 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template> -->
+
+  <template name="apis"
+   value="Set&lt;ApiUuid&gt;" description="Set of ApiUuids" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  
+  <template name="apiu"
+   value="ApiUuid" description="ApiUuid" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  
+  <template name="apip"
+   value="ApiUuid.parse(" description="ApiUuid parse" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  
+  <template name="pre" value="/// $COMMENT$&#10;@Prepared(&#10;  $CONTENT$&#10;)&#10;class $CLASS$ {}
+" description="Add @Prepared annotation" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="dartClassName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="COMMENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="false" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  
+    <template name="prg" value="await pg.preparedQuery(&#10;    PreparedStatement.$STATEMENT$(&#10;      $VALUES$
+    ),&#10;  );" description="Create feezed template" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="dartSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUES" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  
+  <template name="rol"
+   value="AccountLmsRoles" description="AccountLmsRoles" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+
+  <template name="rols"
+   value="Set&lt;AccountLmsRoles>" description="Set of AccountLmsRoles" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+
+  <template name="map"
+   value="Map&lt;String, dynamic&gt;" description="Map of String to dynamic" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  
 </templateSet>

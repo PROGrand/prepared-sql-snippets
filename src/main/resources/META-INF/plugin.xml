@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>org.mtbo.prepared_sql_snippets</id>
-    <name>Prepared SQL snippets tool</name>
+    <id>org.mtbo.preparedsqlsnippets</id>
+    <name>Prepared SQL Snippets Tool</name>
     <vendor email="progrand@gmail.com" url="https://mtbo.org">PROGrand</vendor>
 
     <!-- Product and plugin compatibility requirements -->
