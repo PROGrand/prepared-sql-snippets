@@ -50,8 +50,7 @@
     </context>
   </template>
   
-    <template name="prg" value="await pg.preparedQuery(&#10;    PreparedStatement.$STATEMENT$(&#10;      $VALUES$
-    ),&#10;  );" description="Create feezed template" toReformat="true" toShortenFQNames="true">
+    <template name="prq" value="await pg.preparedQuery(&#10;    PreparedStatement.$STATEMENT$(&#10;      $VALUES$&#10;    ),&#10;  );" description="Call prepared query" toReformat="true" toShortenFQNames="true">
     <variable name="STATEMENT" expression="dartSuggestVariableName()" defaultValue="" alwaysStopAt="true" />
     <variable name="VALUES" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
